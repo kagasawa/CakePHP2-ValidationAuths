@@ -3,6 +3,7 @@
 ## MultivalidatableAuthenticate ##
 
 MultivalidatableBehavior対応の認証処理です。
+
 http://bakery.cakephp.org/articles/dardosordi/2008/07/29/multivalidatablebehavior-using-many-validation-rulesets-per-model
 
     <?php
@@ -35,7 +36,7 @@ http://bakery.cakephp.org/articles/dardosordi/2008/07/29/multivalidatablebehavio
                 $this->Auth->loginRedirect = array('controller' => 'dashboards', 'action' => 'index');
 
                 // logout後のページ指定
-                $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'logout');
+                $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
 
                 // ログインユーザーの情報
                 $this->set('login_user', $this->Auth->user());
